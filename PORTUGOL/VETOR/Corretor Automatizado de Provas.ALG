@@ -1,3 +1,35 @@
+{
+📅 Data de criação: 11/11/2025  
+👩‍💻 Autora: Ana Karolynna Mota  
+🎯 Desafio: Sistema de Correção Automática de Provas  
+
+📘 Descrição:
+Crie um algoritmo que simule a **correção automática** de uma prova de múltipla escolha com **5 questões**, 
+cujas alternativas possíveis são **A**, **B**, **C** ou **D**.  
+O sistema deve permitir que o professor cadastre o **gabarito oficial** e, em seguida, realize a correção das provas dos alunos,
+informando o **nome** e as **respostas** de cada um.
+
+A cada aluno corrigido, o programa deve contabilizar o número de acertos e exibir o desempenho correspondente.  
+No final, o programa deve exibir:
+         1. Quantos Alunos gabaritaram;
+         2. Quantos Alunos acertaran entre 3 e 4
+         3. Quantos Alunos acertaram entre 0 ou 1 questão.
+
+📊 Classificação dos Alunos:
++----------------------------+-----------------------------+
+| 💯 Desempenho              | 📝 Descrição                 |
++----------------------------+-----------------------------+
+| 🏅 Gabaritou               | 5 acertos                   |
+| 👍 Bom desempenho          | 3 a 4 acertos               |
+| 📖 Reforçar os estudos     | 0 a 2 acertos               |
++----------------------------+-----------------------------+
+
+💡 Dica: Utilize **vetores** para armazenar o gabarito e as respostas dos alunos,
+e **laços de repetição** para permitir corrigir várias provas até o usuário decidir parar.
+}
+
+
+
 Algoritmo "semnome"
 
 Var
@@ -13,10 +45,10 @@ Inicio
 
    para i de 1 ate 5 faca
       repita
-         escreva("Informe o gabarito da quest�o",i, ": ")
+         escreva("Informe o gabarito da questão",i, ": ")
          leia(vetorGabarito[i])
          se (vetorGabarito[i] <> "A") e (vetorGabarito[i] <> "B") e (vetorGabarito[i] <> "C") e (vetorGabarito[i] <> "D") entao
-            escreval("Gabarito inv�lido! Digite apenas A, B, C ou D.")
+            escreval("Gabarito inválido! Digite apenas A, B, C ou D.")
          fimse
       ate (vetorGabarito[i] = "A") ou (vetorGabarito[i] = "B") ou (vetorGabarito[i] = "C") ou (vetorGabarito[i] = "D")
    fimpara
@@ -30,7 +62,7 @@ Inicio
       escreval("Qual foi a resposta que o(a) aluno(a) ",aluno, " respondeu na:")
 
       para i de 1 ate 5 faca
-         escreva("Quest�o ", i, ": ")
+         escreva("Questão ", i, ": ")
          leia(vetorRespostaAluno[i])
       fimpara
       escreval()
@@ -40,7 +72,7 @@ Inicio
             cont:=cont +1
          fimse
       fimpara
-      escreval(aluno, " PONTUA��O: ", cont)
+      escreval(aluno, " PONTUAÇÃO: ", cont)
 
 
       se (cont = 5) entao
@@ -51,7 +83,7 @@ Inicio
             qtdAcertaramTresOuQuatro:=qtdAcertaramTresOuQuatro+1
             escreval("STATUS: Muito bem!")
          senao
-            escreval("STATUS: Vamos refor�ar os estudos?")
+            escreval("STATUS: Vamos reforçar os estudos?")
             qtdAcertaramMinimo:=qtdAcertaramMinimo+1
          fimse
       fimse
@@ -62,7 +94,8 @@ Inicio
 
    escreval("- - - - - - - - - - - - - - - - ")
    escreval("Quantidade de Alunos que gabaritaram:", qtdAlunosGabaritaram)
-   escreval("Quantidade de Alunos que acertaram entre 3 e 4  quest�es:", qtdAcertaramTresOuQuatro)
-   escreval("Quantidade de Alunos que acertaram entre 0 e 1 quest�o:", qtdAcertaramMinimo)
+   escreval("Quantidade de Alunos que acertaram entre 3 e 4  questões:", qtdAcertaramTresOuQuatro)
+   escreval("Quantidade de Alunos que acertaram entre 0 e 1 questão:", qtdAcertaramMinimo)
+
 
 Fimalgoritmo
