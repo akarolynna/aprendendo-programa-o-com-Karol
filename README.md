@@ -1,4 +1,4 @@
-# 💻 aprendendo-programa-o-com-Karol  
+# 💻 aprendendo-programção-com-Karol  
 
 
 Bem-vindo(a)! 👋  
